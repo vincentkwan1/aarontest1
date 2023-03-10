@@ -1,0 +1,14 @@
+{{#each ideas}}
+<div class="card card-body mb-2">
+    <h4>{{title}}</h4>
+    <p>{{details}}</p>
+    <a href="/ideas/edit/{{_id}}" class="btn btn-success btn-block">Edit</a>
+    <form action="/ideas/{{_id}}?_method=DELETE" method="post">
+        <!--<input type="hidden" name="method" value="DELETE" /> -->
+        <input name="_method" type="submit" class="btn btn-danger btn-block" value="Delete">
+    </form>
+    <!-- create variable _method with a value "delete" for MethodOverride usage-->
+</div>
+{{else}}
+    <p>No data listed</p>
+{{/each}}

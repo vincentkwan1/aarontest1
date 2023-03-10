@@ -1,0 +1,11 @@
+<!--handle the error messages when render the page, errors is an array contains multiple error nmessages -->
+
+{{#each errors}}
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+{{#if fail_passport}}
+    <div class="alert alert-danger">{{fail_passport}}</div>
+    {{/if}}
